@@ -1,10 +1,3 @@
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
-      </div>
-
-
       <div class="page-header">
         <h1>Buttons</h1>
       </div>
@@ -190,7 +183,7 @@
       <div class="page-header">
         <h1>Thumbnails</h1>
       </div>
-      <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+      <img src="http://placehold.it/400x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
 
 
       <div class="page-header">

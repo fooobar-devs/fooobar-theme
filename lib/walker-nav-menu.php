@@ -66,12 +66,13 @@ class Foobar_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @param int    $id     Current item ID.
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
-		if( $item->current_item_ancestor ) {
+		if( $args->walker->has_children ) {
 			$classes[] = 'dropdown';
 		}
 
@@ -111,7 +112,7 @@ class Foobar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
 		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
 
-		if( $item->current_item_ancestor ) {
+		if( $args->walker->has_children ) {
 			$atts['class']         = 'dropdown-toggle';
 			$atts['data-toggle']   = 'dropdown';
 			$atts['role']          = 'button';
@@ -151,8 +152,8 @@ class Foobar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$item_output .= '<a'. $attributes .'>';
 		/** This filter is documented in wp-includes/post-template.php */
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-
-		if( $item->current_item_ancestor ) {
+		
+		if( $args->walker->has_children ) {
 			$item_output .= ' <span class="caret"></span>';
 		}
 
