@@ -10,11 +10,12 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $sage_includes = [
-  'lib/assets.php',  // Scripts and stylesheets
-  'lib/extras.php',  // Custom functions
-  'lib/setup.php',   // Theme setup
-  'lib/titles.php',  // Page titles
-  'lib/wrapper.php'  // Theme wrapper class
+  'lib/assets.php',           // Scripts and stylesheets
+  'lib/extras.php',           // Custom functions
+  'lib/setup.php',            // Theme setup
+  'lib/titles.php',           // Page titles
+  'lib/wrapper.php',          // Theme wrapper class
+  'lib/walker-nav-menu.php',  // Navigation menu walker class
 ];
 
 foreach ($sage_includes as $file) {

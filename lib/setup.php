@@ -11,7 +11,7 @@ function setup() {
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/
   add_theme_support('soil-clean-up');
-  add_theme_support('soil-nav-walker');
+  //add_theme_support('soil-nav-walker');
   add_theme_support('soil-nice-search');
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
@@ -86,6 +86,7 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+    is_page( 'page-1' ),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
